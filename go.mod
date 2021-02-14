@@ -3,7 +3,10 @@ module helloworld
 go 1.15
 
 require (
+	github.com/asim/go-micro/v3 v3.5.0
+	github.com/golang/protobuf v1.4.3
 	github.com/micro/micro/v3 v3.0.0
+	google.golang.org/protobuf v1.25.0
 )
 
 // This can be removed once etcd becomes go gettable, version 3.4 and 3.5 is not,
