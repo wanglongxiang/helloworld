@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/asim/go-micro/v3"
+	"github.com/micro/micro/v3/service/logger"
 	"helloworld/handler"
 	pb "helloworld/proto"
-	"github.com/micro/micro/v3/service/logger"
 )
 
 func main() {
@@ -13,6 +13,8 @@ func main() {
 		micro.Name("helloworld"),
 		micro.Version("latest"),
 	)
+	// Init will parse the command line flags.
+	srv.Init()
 
 	// Register handler
 	pb.RegisterHelloworldHandler(srv.Server(), new(handler.Helloworld))
